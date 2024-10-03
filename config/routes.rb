@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
-  get "/articles", to: "articles#index"
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-end
-
-
-Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  get "/articles", to: "articles#index"
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
@@ -17,5 +12,5 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # Defines the root path route ("/")
-  root "layouts#application"
+  root "articles#index"
 end
