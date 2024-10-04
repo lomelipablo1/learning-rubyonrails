@@ -1,1 +1,1 @@
-# pizza-manager
+# learning-rubyonrails
